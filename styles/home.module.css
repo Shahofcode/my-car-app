@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 375px;
+}
+
+.brandContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    font-family: "Oswald", sans-serif;
+    font-size: 54px;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 0;
+}
+
+.model {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    margin-top: -20px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px; /* Skapa lite mellanrum från kanten */
+}
+
+
+.mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Lägger till lite padding på sidorna */
+}
+
+.imageContainer {
+    position: relative;
+    left: 0; /* Flyttar bilden till vänster */
+}
+
+.carImage {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.iconColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto; /* Håller ikonerna till höger */
+}
+
+.icon {
+    width: 50px; /* Standardstorlek */
+    height: auto;
+}
+
+/* Justera storlekar för specifika ikoner */
+.lockedIcon {
+    width: 40px; /* Gör "locked.png" mindre */
+    height: auto;
+}
+
+.fannoffIcon {
+    width: 60px; /* Gör "fannoff.png" större */
+    height: auto;
+}
+
+.line {
+    width: 40px;
+    height: 1px;
+    background-color: black;
+    margin: 5px 0; /* Lägger lite utrymme ovanför och under linjen */
+    display: block; /* Säkerställer att linjerna inte döljs */
+}
+
+/* Horisontell linje längst ner */
+
+
+.bottomSection {
+    position: fixed; /* Gör så att sektionen alltid ligger längst ner */
+    bottom: 10px; /* Behåller avståndet */
+    left: 0;
+    width: 100%; /* Säkerställer att sektionen täcker hela skärmen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horizontalLine {
+    width: 100%; /* Sträcker linjen över hela skärmen */
+    height: 1px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.bottomIcons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px; /* Minskar avståndet mellan linjen och ikonerna */
+}
+
+.bottomIcon {
+    width: 40px;
+    height: auto;
+}
