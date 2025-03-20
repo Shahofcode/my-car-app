@@ -139,3 +139,189 @@
     width: 40px;
     height: auto;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.popup {
+    position: fixed; /* Behåller den i mitten av skärmen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.2s ease-out; /* Lättare och mjukare fade */
+    font-family: "Oswald", sans-serif;
+}
+
+/* Stäng-knappen (X) */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popupContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.popupTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popupStatus {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.temperatureControl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Pilar utan border */
+.upArrow, .downArrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Uppåtpilen 🔺 (röd) */
+.upArrow {
+    color: red;
+}
+
+/* Nedåtpilen 🔻 (blå) */
+.downArrow {
+    color: blue;
+}
+
+.tempDisplay {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popupButton {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popupButton:hover {
+    background-color: #333;
+}
+
+/* Batteriikon + progress-bar */
+.batteryWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Batteriikon */
+.batteryIcon {
+    width: 40px;
+    height: auto;
+}
+
+/* Progress-bar */
+.batteryContainer {
+    width: 70%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Progress-bar fyllnad */
+.batteryLevel {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #4caf50, #81c784);
+    transition: width 0.5s ease-in-out;
+}
+
+.chargingAnimation {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 10px;
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+.lockPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Skugga för bättre effekt */
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeInOut 1.5s ease-out;
+    font-family: "Oswald", sans-serif;
+}
+
+.lockPopupText {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lockPopupIcon {
+    width: 60px;
+    height: auto;
+}
+
+/* Fade in och ut */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+    10% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    90% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+}
