@@ -47,7 +47,7 @@
 .logo {
     width: 60px;
     height: auto;
-    margin-right: 20px; /* Skapa lite mellanrum från kanten */
+    margin-right: 20px; 
 }
 
 
@@ -59,12 +59,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0 10px; /* Lägger till lite padding på sidorna */
+    padding: 0 10px; 
 }
 
 .imageContainer {
     position: relative;
-    left: 0; /* Flyttar bilden till vänster */
+    left: 0; 
 }
 
 .carImage {
@@ -79,22 +79,22 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-left: auto; /* Håller ikonerna till höger */
+    margin-left: auto; 
 }
 
 .icon {
-    width: 50px; /* Standardstorlek */
+    width: 50px; 
     height: auto;
 }
 
-/* Justera storlekar för specifika ikoner */
+
 .lockedIcon {
-    width: 40px; /* Gör "locked.png" mindre */
+    width: 40px; 
     height: auto;
 }
 
 .fannoffIcon {
-    width: 60px; /* Gör "fannoff.png" större */
+    width: 60px; 
     height: auto;
 }
 
@@ -102,25 +102,25 @@
     width: 40px;
     height: 1px;
     background-color: black;
-    margin: 5px 0; /* Lägger lite utrymme ovanför och under linjen */
-    display: block; /* Säkerställer att linjerna inte döljs */
+    margin: 5px 0; 
+    display: block; 
 }
 
 /* Horisontell linje längst ner */
 
 
 .bottomSection {
-    position: fixed; /* Gör så att sektionen alltid ligger längst ner */
-    bottom: 10px; /* Behåller avståndet */
+    position: fixed; 
+    bottom: 10px; 
     left: 0;
-    width: 100%; /* Säkerställer att sektionen täcker hela skärmen */
+    width: 100%; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .horizontalLine {
-    width: 100%; /* Sträcker linjen över hela skärmen */
+    width: 100%; 
     height: 1px;
     background-color: black;
     margin: 0;
@@ -132,7 +132,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top: 5px; /* Minskar avståndet mellan linjen och ikonerna */
+    margin-top: 5px; 
 }
 
 .bottomIcon {
@@ -152,7 +152,7 @@
 }
 
 .popup {
-    position: fixed; /* Behåller den i mitten av skärmen */
+    position: fixed; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -163,7 +163,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
-    animation: fadeIn 0.2s ease-out; /* Lättare och mjukare fade */
+    animation: fadeIn 0.2s ease-out; 
     font-family: "Oswald", sans-serif;
 }
 
@@ -300,7 +300,7 @@
     background: white;
     padding: 20px;
     width: 200px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Skugga för bättre effekt */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
     border-radius: 10px;
     text-align: center;
     animation: fadeInOut 1.5s ease-out;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
-import "../styles/globals.css"; // Importera globala CSS-filen
+import "../styles/globals.css"; 
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }, [router]);
 
     if (showLoading && router.pathname !== "/loading") {
-        return null; // Döljer sidan tills vi skickar användaren till loading
+        return null; 
     }
 
     return <Component {...pageProps} />;

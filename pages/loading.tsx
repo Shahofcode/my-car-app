@@ -8,9 +8,9 @@ export default function LoadingPage() {
     const [fadeIn, setFadeIn] = useState(false);
 
     useEffect(() => {
-        setFadeIn(true); // Starta fade-in på loggan
+        setFadeIn(true); 
         const timer = setTimeout(() => {
-            router.push("/"); // Efter 4 sekunder skickas man till LandingPage
+            router.push("/");
         }, 5000);
 
         return () => clearTimeout(timer);
@@ -19,7 +19,7 @@ export default function LoadingPage() {
     return (
         <div className={styles.container}>
             <Image
-                src="/logo.png" // Hämtar loggan från public/
+                src="/logo.png" 
                 alt="Logo"
                 width={200}
                 height={200}
