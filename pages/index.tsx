@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/home.module.css";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Homepage() {
+  const router = useRouter();
   const [isLocked, setIsLocked] = useState(true);
   const [showLockPopup, setShowLockPopup] = useState(false);
   const [isFanOn, setIsFanOn] = useState(false);
@@ -136,8 +139,26 @@ export default function Homepage() {
       <div className={styles.bottomSection}>
         <div className={styles.horizontalLine}></div>
         <div className={styles.bottomIcons}>
-          <Image src="/home1.png" alt="Home" width={40} height={40} className={styles.bottomIcon} />
-          <Image src="/car.png" alt="Car" width={40} height={40} className={styles.bottomIcon} />
+        <Link href="/">
+  <Image 
+    src={router.pathname === "/" ? "/home2.png" : "/home1.png"} 
+    alt="Home" 
+    width={40} 
+    height={40} 
+    className={styles.bottomIcon} 
+  />
+</Link>
+
+<Link href="/car">
+  <Image 
+    src={router.pathname === "/car" ? "/car1.png" : "/car.png"} 
+    alt="Car" 
+    width={40} 
+    height={40} 
+    className={styles.bottomIcon} 
+  />
+</Link>
+
           <Image src="/user.png" alt="User" width={40} height={40} className={styles.bottomIcon} />
         </div>
       </div>
@@ -146,12 +167,12 @@ export default function Homepage() {
       {showLockPopup && (
         <div className={styles.lockPopup}>
           <h2 className={styles.lockPopupText}>{isLocked ? "Låst" : "Olåst"}</h2>
-          <Image 
-            src={isLocked ? "/locked.png" : "/unlocked.png"} 
-            alt={isLocked ? "Locked" : "Unlocked"} 
-            width={60} 
-            height={60} 
-            className={styles.lockPopupIcon} 
+          <Image
+            src={isLocked ? "/locked.png" : "/unlocked.png"}
+            alt={isLocked ? "Locked" : "Unlocked"}
+            width={60}
+            height={60}
+            className={styles.lockPopupIcon}
           />
         </div>
       )}
@@ -176,31 +197,31 @@ export default function Homepage() {
       )}
 
       {/* Popup för batterinivå */}
-{showBatteryPopup && (
-  <div className={styles.popup}>
-    <div className={styles.popupContent}>
-      <button className={styles.closeButton} onClick={toggleBatteryPopup}>✖</button>
-      <h2 className={styles.popupTitle}>Batteristatus</h2>
-      
-      {/* Progress-bar för batterinivån */}
-      <div className={styles.batteryContainer}>
-        <div className={styles.batteryLevel} style={{ width: `${batteryLevel}%` }}></div>
-      </div>
+      {showBatteryPopup && (
+        <div className={styles.popup}>
+          <div className={styles.popupContent}>
+            <button className={styles.closeButton} onClick={toggleBatteryPopup}>✖</button>
+            <h2 className={styles.popupTitle}>Batteristatus</h2>
 
-      <p className={styles.popupStatus}>Nuvarande laddning: {batteryLevel}%</p>
+            {/* Progress-bar för batterinivån */}
+            <div className={styles.batteryContainer}>
+              <div className={styles.batteryLevel} style={{ width: `${batteryLevel}%` }}></div>
+            </div>
 
-      {/* Laddningsanimation */}
-      {isCharging && <p className={styles.chargingAnimation}>⚡ Laddar...</p>}
+            <p className={styles.popupStatus}>Nuvarande laddning: {batteryLevel}%</p>
 
-      {/* Om bilen laddar -> "Avsluta", annars "Starta Laddning" */}
-      {isCharging ? (
-        <button onClick={stopCharging} className={styles.popupButton}>Avsluta</button>
-      ) : batteryLevel < 100 ? (
-        <button onClick={startCharging} className={styles.popupButton}>Starta Laddning</button>
-      ) : null}
-    </div>
-  </div>
-)}
+            {/* Laddningsanimation */}
+            {isCharging && <p className={styles.chargingAnimation}>⚡ Laddar...</p>}
+
+            {/* Om bilen laddar -> "Avsluta", annars "Starta Laddning" */}
+            {isCharging ? (
+              <button onClick={stopCharging} className={styles.popupButton}>Avsluta</button>
+            ) : batteryLevel < 100 ? (
+              <button onClick={startCharging} className={styles.popupButton}>Starta Laddning</button>
+            ) : null}
+          </div>
+        </div>
+      )}
 
     </div>
   );

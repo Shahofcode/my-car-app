@@ -1,0 +1,100 @@
+/* styles/car.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .header {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 375px;
+  }
+  
+  .brandContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .brand {
+    font-family: "Oswald", sans-serif;
+    font-size: 54px;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 0;
+  }
+  
+  .model {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    margin-top: -20px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .carModelImageWrapper {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .carModelImage {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .bottomSection {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .horizontalLine {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bottomIcons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .bottomIcon {
+    width: 40px;
+    height: auto;
+  }
+  
