@@ -50,7 +50,6 @@
 
 }
 
-
 .mainContent {
     display: flex;
     align-items: center;
@@ -79,7 +78,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-left: auto; 
+    margin-right: 10px;
 }
 
 .icon {
@@ -105,9 +104,6 @@
     margin: 5px 0; 
     display: block; 
 }
-
-/* Horisontell linje längst ner */
-
 
 .bottomSection {
     position: fixed; 
@@ -184,18 +180,18 @@
     align-items: center;
 }
 
-
-
 .popupTitle {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #000000;
 }
 
 .popupStatus {
     font-size: 18px;
     color: #666;
     margin-bottom: 10px;
+    color: #000000;
 }
 
 .temperatureControl {
@@ -225,7 +221,7 @@
 
 .tempDisplay {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 100;
 }
 
 .popupButton {
@@ -238,9 +234,12 @@
     font-size: 16px;
 }
 
+/*
 .popupButton:hover {
-    background-color: #333;
+    transform: scale(1.1); 
+
 }
+    */
 
 /* Batteriikon + progress-bar */
 .batteryWrapper {
@@ -311,6 +310,7 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #000000;
 }
 
 .lockPopupIcon {

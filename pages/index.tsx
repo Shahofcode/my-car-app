@@ -112,13 +112,16 @@ export default function Homepage() {
               className={styles.bottomIcon}
             />
           </Link>
-          <Image
-            src="/user.png"
-            alt="User"
-            width={40}
-            height={40}
-            className={styles.bottomIcon}
-          />
+          <Link href="/user">
+  <Image
+    src={router.pathname === "/user" ? "/user1.png" : "/user.png"} 
+    alt="User"
+    width={40}
+    height={40}
+    className={styles.bottomIcon}
+  />
+</Link>
+
         </div>
       </div>
 
