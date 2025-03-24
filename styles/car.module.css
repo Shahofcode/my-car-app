@@ -1,5 +1,3 @@
-/* styles/car.module.css */
-
 .container {
     display: flex;
     flex-direction: column;
@@ -7,10 +5,10 @@
     align-items: center;
     height: 100vh;
     background-color: white;
-    color: #333;
+    color: black;
     text-align: left;
     width: 100%;
-    max-width: 375px;
+    max-width: 414px;
     margin: 0 auto;
     position: relative;
   }
@@ -50,7 +48,6 @@
   .logo {
     width: 60px;
     height: auto;
-    margin-right: 20px;
   }
   
   .carModelImageWrapper {
@@ -67,14 +64,76 @@
     border-radius: 10px;
   }
   
+  /* "Om bilen"-rubrik */
+  .pageTitle {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 25px 0 5px;
+    text-align: center;
+  }
+  
+  .infoSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 15px 80px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .infoBox {
+    flex: 1 1 100%;
+    border: 1px solid #000;
+    border-radius: 12px;
+    padding: 18px 16px;
+    background-color: #fefefe;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    font-family: "Oswald", sans-serif;
+    color: #000;
+  }
+  
+  .fullWidthBox {
+    width: 100%;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+  }
+  
+  .infoItem {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .chargeList {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .chargeList li {
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+  
   .bottomSection {
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     width: 100%;
+    background-color: white; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10; 
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   
   .horizontalLine {
